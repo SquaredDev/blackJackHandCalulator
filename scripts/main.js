@@ -11,52 +11,47 @@
 
 
 function handValue (hand) {
-  let tempHand = hand
+  let tempHand = []
   let handCount = 0
   // This section defines the values of the cards.
-  for (var i = 0; i < tempHand.length; i++) {
-    if (tempHand[i] === "K" || tempHand[i] === "Q" || tempHand[i] === "J") {
-      tempHand[i] = 10
+  for (var i = 0; i < hand.length; i++) {
+    if (hand[i] == "K" || hand[i] == "Q" || hand[i] == "J") {
+      tempHand.push(10)
     }
-    else if (tempHand[i] == "2") {
-      tempHand[i] = 2
+    else if (hand[i] == "2") {
+      tempHand.push(2)
     }
-    else if (tempHand[i] == "3") {
-      tempHand[i] = 3
+    else if (hand[i] == "3") {
+      tempHand.push(3)
     }
-    else if (tempHand[i] == "4") {
-      tempHand[i] = 4
+    else if (hand[i] == "4") {
+      tempHand.push(4)
     }
-    else if (tempHand[i] == "5") {
-      tempHand[i] = 5
+    else if (hand[i] == "5") {
+      tempHand.push(5)
     }
-    else if (tempHand[i] == "6") {
-      tempHand[i] = 6
+    else if (hand[i] == "6") {
+      tempHand.push(6)
     }
-    else if (tempHand[i] == "7") {
-      tempHand[i] = 7
+    else if (hand[i] == "7") {
+      tempHand.push(7)
     }
-    else if (tempHand[i] == "8") {
-      tempHand[i] = 8
+    else if (hand[i] == "8") {
+      tempHand.push(8)
     }
-    else if (tempHand[i] == "9") {
-      tempHand[i] = 9
+    else if (hand[i] == "9") {
+      tempHand.push(9)
     }
-    else if (tempHand[i] === "A") {
-      tempHand[i] = 11
+    else if (hand[i] == "A") {
+      tempHand.push(11)
     }
-    console.log(tempHand);
-
-    // This section calulates the hand.
-    if (handCount > 21) {
-      for (var k = 0; k < tempHand.length; k++) {
-        if (tempHand[k] === 11) {
-          tempHand[k] = 1
-        }
-      }
-    }
-    for (var j = 0; j < tempHand.length; j++) {
-      handCount = handCount + tempHand[j]
+  }
+  //This section calulates the hand.
+  console.log(tempHand);
+  for (let j = 0; j < tempHand.length; j++) {
+    handCount = handCount + tempHand[j]
+    if (handCount >= 22 && tempHand.includes(11)) {
+      console.log('The 11 rule');
     }
   }
   return handCount
