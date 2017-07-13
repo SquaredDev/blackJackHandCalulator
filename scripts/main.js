@@ -43,16 +43,18 @@ function handValue (hand) {
       tempHand.push(9)
     }
     else if (hand[i] == "A") {
-      tempHand.push(11)
+      tempHand.push(1)
     }
   }
   //This section calulates the hand.
   console.log(tempHand);
   for (let j = 0; j < tempHand.length; j++) {
     handCount = handCount + tempHand[j]
-    if (handCount >= 22 && tempHand.includes(11)) {
-      console.log('The 11 rule');
-    }
+
+  }
+  if (handCount <= 10 && handCount >= 0 && tempHand.includes(1)) {
+    console.log('The 11 rule');
+    handCount = handCount + 10
   }
   return handCount
 }
