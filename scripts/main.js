@@ -59,12 +59,13 @@ function handValue (hand) {
   return handCount
 }
 
-console.log(handValue(["2", "2", "8"]));
-console.log(handValue(["2", "2", "K"]));
-console.log(handValue(["2", "Q"]));
-console.log(handValue(["7", "J"]));
-console.log(handValue(["7", "A"]));
-console.log(handValue(["8", "J", "A"]));
-console.log(handValue(["8", "A", "J"]));
-console.log(handValue(["8", "7", "A", "A"]));
-console.log(handValue(["K", "A"]));
+// For testing
+// console.log(handValue(["2", "2", "8"]));
+// console.log(handValue(["2", "2", "K"]));
+// console.log(handValue(["2", "Q"]));
+// console.log(handValue(["7", "J"]));
+// console.log(handValue(["7", "A"]));
+// console.log(handValue(["8", "J", "A"]));
+// console.log(handValue(["8", "A", "J"]));
+// console.log(handValue(["8", "7", "A", "A"]));
+// console.log(handValue(["K", "A"]));
